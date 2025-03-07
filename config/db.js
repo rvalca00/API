@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://ruben:changeme@localhost:27017/sensores?authSource=admin';
+const MONGO_URI = process.env.MONGO_CREDENTIALS || 'mongodb://ruben:changeme@localhost:27017/sensores?authSource=admin';
 
 const connectDB = async () => {
     try {
