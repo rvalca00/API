@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "674b0980-5e77-450d-8e3b-0c7769c86638",
+		"name": "API Datos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11587303"
+	},
+	"item": [
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "/sensors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/sensors",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sensors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sensors/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/sensors/65f7a2b3c9d8e01234567893",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sensors",
+								"65f7a2b3c9d8e01234567893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sensors",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sensor test",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Aula de Test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/sensors",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sensors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sensors/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "location",
+									"value": "sala del servidor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/sensors/65f7a2b3c9d8e01234567893",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sensors",
+								"65f7a2b3c9d8e01234567893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sensors/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/sensors/65f8a3b4c9d8e01234567898",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sensors",
+								"65f8a3b4c9d8e01234567898"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Readings",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sensorId",
+									"value": "65f8a3b4c9d8e01234567891",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "24.4",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "ºC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/readings/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"readings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/readings/:sensorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/readings/65f8a3b4c9d8e01234567898",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"readings",
+								"65f8a3b4c9d8e01234567898"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/readings/time/:sensorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/readings/time/65f7a2b3c9d8e01234567892?start=28-02-2025&end=28-02-2025",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"readings",
+								"time",
+								"65f7a2b3c9d8e01234567892"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "28-02-2025"
+								},
+								{
+									"key": "end",
+									"value": "28-02-2025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/readings/:sensorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/readings/65f8a3b4c9d8e01234567891",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"readings",
+								"65f8a3b4c9d8e01234567891"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

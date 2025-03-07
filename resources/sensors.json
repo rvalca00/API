@@ -1,0 +1,30 @@
+[
+    {
+        "_id": { "$oid": "65f8a3b4c9d8e01234567891" },
+        "name": "Sensor 1",
+        "type": "Temperatura",
+        "location": "Laboratorio A",
+        "createdAt": { "$date":  "2025-01-31T10:00:00.000Z" }
+    },
+    {
+        "_id": { "$oid": "65f7a2b3c9d8e01234567892" },
+        "name": "Sensor 2",
+        "type": "Humedad",
+        "location": "Invernadero",
+        "createdAt": { "$date":  "2025-01-31T10:00:00.000Z" }
+    },
+    {
+        "_id": { "$oid": "65f7a2b3c9d8e01234567893" },
+        "name": "Sensor 3",
+        "type": "CO2",
+        "location": "Sala de servidores",
+        "createdAt": { "$date":  "2025-01-31T10:00:00.000Z" }
+    },
+    {
+        "_id": { "$oid": "65f8a3b4c9d8e01234567898" },
+        "name": "Sensor de Consumo Energético",
+        "type": "Energía",
+        "location": "Cuadro eléctrico principal",
+        "createdAt": { "$date":  "2025-01-31T10:00:00.000Z" }
+    }
+]
